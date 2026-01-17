@@ -19,6 +19,14 @@ CREATE TABLE IF NOT EXISTS exercises (
     session_id INTEGER NOT NULL,
     name TEXT NOT NULL,
     FOREIGN KEY (session_id) REFERENCES sessions(id)
-    reps INTEGER NOT NULL,
+);
+
+
+CREATE TABLE IF NOT EXISTS sets (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    exercise_id INTEGER NOT NULL,
     weight REAL NOT NULL,
+    reps INTEGER NOT NULL,
+    set_order INTEGER NOT NULL,
+    FOREIGN KEY (exercise_id) REFERENCES exercises(id)
 );

@@ -12,7 +12,7 @@ type LoginRequest struct {
 }
 
 type SessionResponse struct {
-	ID        int64              `json:"id"`
+	ID        int                `json:"id"`
 	Date      string             `json:"date"`
 	Notes     string             `json:"notes"`
 	Exercises []ExerciseResponse `json:"exercises"`

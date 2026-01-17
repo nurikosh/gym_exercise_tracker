@@ -4,11 +4,10 @@ import (
 	"time"
 )
 
-// User represents an authenticated gym member
 type User struct {
-	ID        int64
+	ID        int
 	Email     string
-	Password  string // hashed
+	Password  string
 	Name      string
 	CreatedAt time.Time
 }

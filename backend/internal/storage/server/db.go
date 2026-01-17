@@ -3,6 +3,8 @@ package server
 import (
 	"database/sql"
 	"fmt"
+	"os"
+	"path/filepath"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -25,4 +27,18 @@ func ConnectDB() (*sql.DB, error) {
 	return db, nil
 }
 
-func Run
+func RunMigrations(db *sql.DB) error {
+	path := filepath.Join("internal/storage/migrations", "001_init.sql")
+
+	file, err := os.ReadFile(path)
+	if err != nil {
+		return fmt.Errorf("Error while reading: %v", err)
+	}
+
+	_, err = db.Exec(string(file))
+	if err != nil {
+		return fmt.Errorf("Migration error: %v", err)
+	}
+
+	return nil
+}

@@ -1,8 +1,8 @@
 package domain
 
 type Exercise struct {
-	ID        int64
-	SessionID int64
+	ID        int
+	SessionID int
 	Name      string
 	Sets      []Set
 }

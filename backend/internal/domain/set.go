@@ -1,9 +1,9 @@
 package domain
 
 type Set struct {
-	ID         int64
-	ExerciseID int64
-	Weight     float64
+	ID         int
+	ExerciseID int
+	Weight     float32
 	Reps       int
 	Order      int
 }
