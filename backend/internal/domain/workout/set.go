@@ -1,9 +1,9 @@
-package domain
+package workout
 
 type Set struct {
 	ID         int
 	ExerciseID int
-	Weight     float32
+	Weight     float64
 	Reps       int
-	Order      int
+	SetOrder   int
 }

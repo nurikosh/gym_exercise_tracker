@@ -1,11 +1,13 @@
-package domain
+package workout
 
-import "time"
+import (
+	"gym/internal/domain"
+	"time"
+)
 
 type Session struct {
-	ID        int
-	UserID    int
-	Date      time.Time
-	Notes     string
-	Exercises []Exercise
+	ID     int
+	UserID domain.UserID
+	Date   time.Time
+	Notes  string
 }

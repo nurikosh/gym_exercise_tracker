@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
+	"gym/internal/infrastructure/repository/sqlite/server"
 	"log"
-
-	"gym/internal/storage/server"
 )
 
 func main() {

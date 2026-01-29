@@ -1,8 +1,7 @@
-package domain
+package workout
 
 type Exercise struct {
-	ID        int
-	SessionID int
-	Name      string
-	Sets      []Set
+	ID          int
+	Name        string
+	Description string
 }
